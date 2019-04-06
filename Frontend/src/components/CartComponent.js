@@ -1,10 +1,12 @@
 
 
 var CartItemComponent = require('./CartItemComponent');
-var Srorage = require('../Storage');
-var all = require('../Pizza_List');
+var Storage = require('../Storage');
+
 
 function CartComponent() {
+
+    var all = require('../Pizza_List').list;
 
     this.items = [];
     var self = this;

@@ -1,6 +1,5 @@
 
 var PizzaItemComponent = require('./PizzaItemComponent');
-var all = require('../Pizza_List');
 
 function PizzaListComponent () {
 
@@ -9,7 +8,7 @@ function PizzaListComponent () {
     var items = [];
     this.cartComponent = undefined;
 
-    var pizzas = require('../Pizza_List');
+    var pizzas = require('../Pizza_List').list;
 
     pizzas.forEach(function(item){
         var curentItem = new PizzaItemComponent();
@@ -21,13 +20,13 @@ function PizzaListComponent () {
     $(document).on('click','[data-action="addSmall"]',function(e){
         e.preventDefault();
         var id = $(this).attr('data-id');
-        var item = all.find(function(it){return it.id==id});
+        var item = pizzas.find(function(it){return it.id==id});
         self.cartComponent.addCartItem('small',item);
     });
     $(document).on('click','[data-action="addLarge"]',function(e){
         e.preventDefault();
         var id = $(this).attr('data-id');
-        var item = all.find(function(it){return it.id==id});
+        var item = pizzas.find(function(it){return it.id==id});
         self.cartComponent.addCartItem('large',item);
     });
 

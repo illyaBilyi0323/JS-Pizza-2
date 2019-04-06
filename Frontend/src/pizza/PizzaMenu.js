@@ -3,12 +3,15 @@
  */
 var Templates = require('../Templates');
 var PizzaCart = require('./PizzaCart');
-var Pizza_List = require('../Pizza_List');
+
 
 //HTML едемент куди будуть додаватися піци
 var $pizza_list = $("#pizza_list");
 
 function showPizzaList(list) {
+
+    var Pizza_List = require('../Pizza_List').list;
+
     //Очищаємо старі піци в кошику
     $pizza_list.html("");
 

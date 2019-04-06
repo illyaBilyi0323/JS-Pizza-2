@@ -8,15 +8,18 @@
     </div>
     <div>
         <div class="diam"></div>
-        <span>22</span>
+        <span><%=item[ type=='small'?'small_size':'big_size' ].size%></span>
         <div class="weight"></div>
-        44
+        <%=item[type=='small'?'small_size':'big_size' ].weight%>
     </div>
     <div>
-        <span>12грн</span>
-        <button class="substract" data-action="substract" data-id=""<%=item.id%>>-</button>
-        <span data-item="quantity"><%=quantity%></span>
-        <button class="plus" data-action="plus" data-id="<%=item.id%>">+</button>
+        <span>
+            <%=item[type=='small'?'small_size':'big_size' ].weight%>
+            грн
+        </span>
+        <button class="substract" data-action="substract" data-id="<%=item.id +'_' + type  %>">-</button>
+        <span data-item="quantity_<%=type%>"><%=quantity%></span>
+        <button class="plus" data-action="plus" data-id="<%=item.id   +'_' + type %>">+</button>
         <button class="closer">x</button>
     </div>
     <img class="item-image" src="assets/images/pizza_2.jpg">

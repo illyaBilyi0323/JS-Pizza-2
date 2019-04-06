@@ -1,0 +1,50 @@
+
+
+<div class="footer visible-lg text-center col-xs-9">
+    PIZZA KMA - практичний проект в межах курсу JavaScript
+</div>
+</div>
+<div class="col-xs-3 relative">
+    <div class="col-xs-3 right-fixed">
+        <div class="right-title">
+                        <span class="h4">Замовлення
+                        <span class ="count" id="count"></span></span>
+            <span class="clear-buylist">Очистити&nbsp;замовлення</span>
+        </div>
+        <div class="buylist" id="buylist"></div>
+    </div>
+</div>
+<div class="right-footer col-xs-3">
+    <span style="font-weight: bold">Сума замовлення <span class = "sum" id="sum" style="font-size:30px">&nbsp</span>грн</span>
+    <%if (page=='main'){%>>
+    <form action="/order.html" method="get">
+        <button class="button btn-warning">Замовити</button>
+    </form>
+    <%}%>
+    <%if (page=='order'){%>>
+    <form action="/" method="get">
+        <button class="button btn-warning">Повернутить</button>
+    </form>
+    <%}%>
+</div>
+</div>
+</div>
+</div>
+<div class="row relative">
+    <div class="flag-up label-info "  style="color:white">Цього тижня на все -20%</div>
+</div>
+</div>
+
+<div id="cart"></div>
+
+
+<!-- jQuery JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
+
+<!--Bootsrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!--Own JavaScript -->
+<script type="text/javascript"  src="assets/js/main.js"> </script>
+</body>
+</html>

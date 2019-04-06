@@ -13,7 +13,12 @@ var storate = {
                 });
             });
             localStorage.setItem('data',JSON.stringify(state));
+    },
+
+    getCart: function(){
+        return JSON.parse(localStorage.getItem('data'));
     }
+
 
 }
 
